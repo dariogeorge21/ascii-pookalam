@@ -1,7 +1,8 @@
-# Open the file and read lines into a list
-with open('/mnt/D_Drive/VS CODE/GIT/ASCII-pookalam/plan2.txt', 'r') as file:
-    lines = file.read().strip().split('\n')
-
-# Iterate through each line and print it
-for line in lines:
-    print(line)
+# Open the file in read mode
+with open("plan2.txt", "r") as file:
+    # Iterate over each line in the file
+    for line in file:
+        line = line.strip("\n")   # remove only the newline at end
+        # join characters with space
+        spaced_line = " ".join(line)
+        print(spaced_line)
